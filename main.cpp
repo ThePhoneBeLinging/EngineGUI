@@ -1,9 +1,8 @@
-#include <iostream>
 #include "EngineBase.h"
 
 int main()
 {
-    EngineBase::addTexture("dean",0,0);
+    EngineBase::addTexture("dean",3,2);
     EngineBase::startGUI();
     return 0;
 }
