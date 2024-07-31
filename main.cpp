@@ -1,7 +1,9 @@
 #include <iostream>
+#include "EngineBase.h"
 
 int main()
 {
-    std::cout << "Hello, World!" << std::endl;
+    EngineBase::addTexture("dean",0,0);
+    EngineBase::startGUI();
     return 0;
 }
