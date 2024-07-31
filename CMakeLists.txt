@@ -17,7 +17,9 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(EngineBase)
 
 
-add_executable(EngineGUI main.cpp)
+add_executable(EngineGUI main.cpp
+        EngineGUI.cpp
+        EngineGUI.h)
 
 # Assuming EngineBase provides a target named EngineBase::EngineBase
 target_link_libraries(EngineGUI PRIVATE EngineBase)
