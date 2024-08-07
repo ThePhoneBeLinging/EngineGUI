@@ -4,9 +4,13 @@
 
 #include "EngineGUI.h"
 
+#include <EngineBase.h>
 #include <iostream>
 
 void EngineGUI::launch()
 {
     std::cout << "Appliation Starting" << std::endl;
+    while (!EngineBase::shouldAppClose())
+    {
+    }
 }

@@ -4,7 +4,7 @@
 int main()
 {
     auto thread = std::thread(EngineGUI::launch);
-    EngineBase::addTexture("dean",3,2);
     EngineBase::startGUI();
+    thread.join();
     return 0;
 }
