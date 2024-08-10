@@ -3,10 +3,13 @@ project(EngineGUI)
 
 set(CMAKE_CXX_STANDARD 26)
 
+# Define the path to your resource folder
+set(RESOURCE_FOLDER ${CMAKE_SOURCE_DIR}/Textures)
+
+# Copy the resource folder
+file(COPY ${RESOURCE_FOLDER} DESTINATION ${CMAKE_BINARY_DIR})
 
 include(FetchContent)
-
-
 FetchContent_Declare(
         EngineBase
         GIT_REPOSITORY https://github.com/ThePhoneBeLinging/EngineBase.git
@@ -35,5 +38,4 @@ target_link_libraries(EngineGUI PRIVATE
 target_include_directories(EngineGUI PRIVATE
         ${EngineBase_SOURCE_DIR}/include
         ${Utility_SOURCE_DIR}/include
-
 )

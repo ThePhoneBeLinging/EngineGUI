@@ -22,9 +22,10 @@ void EngineGUI::launch()
 void EngineGUI::createUI()
 {
     auto drawAble = new DrawAbleObject(20,20,50,50);
-    auto lamda = [](Button* button)
+    auto lamda = [](DrawAbleObject* button)
     {
         std::cout << Utility::getRandomInt(5,10) << std::endl;
+        button->deleteObject();
     };
     drawAble->mButton.setOnClick(lamda);
     drawAble->addToScene(0);
@@ -32,5 +33,5 @@ void EngineGUI::createUI()
 
 void EngineGUI::loadLocalTextures()
 {
-    EngineBase::addTexture("../Textures/BBishop.png",0,0);
+    EngineBase::addTexture("Textures/MissingTexture.png",0,0);
 }
