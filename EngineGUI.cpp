@@ -11,7 +11,7 @@
 void EngineGUI::launch()
 {
     std::cout << "Appliation Starting" << std::endl;
-    EngineGUI::createUI();
+    createUI();
     while (!EngineBase::shouldAppClose())
     {
     }
@@ -19,11 +19,11 @@ void EngineGUI::launch()
 
 void EngineGUI::createUI()
 {
-    auto drawAble = new DrawAbleObject(20,20,5,800);
+    auto drawAble = new DrawAbleObject(20,20,50,50);
     drawAble->addToScene(0);
 }
 
 void EngineGUI::loadLocalTextures()
 {
-    EngineBase::addTexture("",0,0);
+    EngineBase::addTexture("../Textures/BBishop.png",0,0);
 }
