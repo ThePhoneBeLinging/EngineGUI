@@ -8,6 +8,8 @@
 #include <EngineBase.h>
 #include <iostream>
 
+#include "Utility.h"
+
 void EngineGUI::launch()
 {
     std::cout << "Appliation Starting" << std::endl;
@@ -20,6 +22,11 @@ void EngineGUI::launch()
 void EngineGUI::createUI()
 {
     auto drawAble = new DrawAbleObject(20,20,50,50);
+    auto lamda = [](Button* button)
+    {
+        std::cout << Utility::getRandomInt(5,10) << std::endl;
+    };
+    drawAble->mButton.setOnClick(lamda);
     drawAble->addToScene(0);
 }
 
