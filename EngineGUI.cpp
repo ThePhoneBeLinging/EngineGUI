@@ -16,11 +16,16 @@ void EngineGUI::launch()
     createUI();
     while (!EngineBase::shouldAppClose())
     {
+
     }
 }
 
 void EngineGUI::createUI()
 {
+    auto line = new DrawAbleObject(0,20,5,1280);
+    line->addToScene(0);
+    line->mTextureManager.setTextureIndex(1);
+
     auto drawAble = new DrawAbleObject(20,20,50,50);
     auto lamda = [](DrawAbleObject* button)
     {
@@ -34,4 +39,6 @@ void EngineGUI::createUI()
 void EngineGUI::loadLocalTextures()
 {
     EngineBase::addTexture("Textures/MissingTexture.png",0,0);
+    EngineBase::addTexture("BLACK",1,0);
+    EngineBase::addTexture("WHITE",1,1);
 }
