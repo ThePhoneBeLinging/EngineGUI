@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.28)
 project(EngineGUI)
 
-set(CMAKE_CXX_STANDARD 26)
-
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
 # Define the path to your resource folder
 set(RESOURCE_FOLDER ${CMAKE_SOURCE_DIR}/Textures)
 
