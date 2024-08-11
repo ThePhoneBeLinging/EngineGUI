@@ -12,7 +12,6 @@ class EngineGUI
 public:
     static void launch();
     static void loadLocalTextures();
-private:
     static void createUI();
 };
 
