@@ -4,11 +4,11 @@
 
 #include "EngineGUI.h"
 
-#include <DrawAbleObject.h>
-#include <EngineBase.h>
+#include "EngineBase/DrawAbleObject.h"
+#include "EngineBase/EngineBase.h"
 #include <iostream>
 
-#include "Utility.h"
+#include "Utility/Utility.h"
 
 void EngineGUI::launch()
 {
